@@ -16,5 +16,21 @@ namespace MisOfertasDesktop
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_user_Click(object sender, EventArgs e)
+        {
+            txt_user.Text = "";
+        }
+
+        private void txt_pass_Click(object sender, EventArgs e)
+        {
+            txt_pass.UseSystemPasswordChar = true;
+            txt_pass.Text = "";
+        }
     }
 }
