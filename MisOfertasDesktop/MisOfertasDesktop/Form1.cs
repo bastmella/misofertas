@@ -15,6 +15,7 @@ namespace MisOfertasDesktop
         public Form1()
         {
             InitializeComponent();
+            //Hola
         }
     }
 }
