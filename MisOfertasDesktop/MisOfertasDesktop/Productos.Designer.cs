@@ -60,6 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -381,11 +382,22 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Nombre";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(488, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(67, 24);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Menú";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 332);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.tabControl1);
@@ -438,5 +450,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button5;
     }
 }

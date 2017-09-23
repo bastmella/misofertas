@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -295,16 +296,28 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "Rango Puntos";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(493, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(67, 24);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Menú";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Descuentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 332);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.tabControl1);
             this.Name = "Descuentos";
             this.Text = "Descuentos";
+            this.Load += new System.EventHandler(this.Descuentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -344,5 +357,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
     }
 }

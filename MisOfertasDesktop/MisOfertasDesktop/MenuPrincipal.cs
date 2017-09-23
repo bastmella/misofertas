@@ -16,5 +16,12 @@ namespace MisOfertasDesktop
         {
             InitializeComponent();
         }
+
+        private void btn_mantenedor_Click(object sender, EventArgs e)
+        {
+            Mantenedores mant = new Mantenedores();
+            mant.Show();
+            this.Hide();
+        }
     }
 }

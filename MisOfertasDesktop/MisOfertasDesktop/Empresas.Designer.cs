@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btn_atras = new System.Windows.Forms.Button();
-            this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tc_mantenedores = new System.Windows.Forms.TabControl();
             this.tp_añadir = new System.Windows.Forms.TabPage();
             this.btn_añadir = new System.Windows.Forms.Button();
@@ -59,12 +58,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
+            this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
             this.tc_mantenedores.SuspendLayout();
             this.tp_añadir.SuspendLayout();
             this.tp_modificar.SuspendLayout();
             this.tp_eliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_atras
@@ -377,11 +378,22 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Lista de las Empresas";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(596, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(67, 24);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Menú";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 397);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tc_mantenedores);
@@ -389,7 +401,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Empresas";
             this.Text = "Mantenedor de Empresas";
-            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).EndInit();
             this.tc_mantenedores.ResumeLayout(false);
             this.tp_añadir.ResumeLayout(false);
             this.tp_añadir.PerformLayout();
@@ -398,6 +409,7 @@
             this.tp_eliminar.ResumeLayout(false);
             this.tp_eliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +447,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button5;
     }
 }
