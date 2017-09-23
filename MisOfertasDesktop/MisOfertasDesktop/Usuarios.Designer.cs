@@ -68,6 +68,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -464,11 +465,22 @@
             this.label25.TabIndex = 2;
             this.label25.Text = "Rut";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(515, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(67, 24);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Menú";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 331);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.tabControl1);
@@ -529,5 +541,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button5;
     }
 }

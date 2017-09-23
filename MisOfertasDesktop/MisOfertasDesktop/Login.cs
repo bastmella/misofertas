@@ -19,8 +19,12 @@ namespace MisOfertasDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
         }
+
+     
 
         private void txt_user_Click(object sender, EventArgs e)
         {

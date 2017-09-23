@@ -16,5 +16,17 @@ namespace MisOfertasDesktop
         {
             InitializeComponent();
         }
+
+        private void Descuentos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
     }
 }
