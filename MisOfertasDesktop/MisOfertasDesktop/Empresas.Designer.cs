@@ -61,6 +61,7 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dt_empresas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
             this.tc_mantenedores.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             // tp_añadir
             // 
+            this.tp_añadir.Controls.Add(this.label11);
             this.tp_añadir.Controls.Add(this.btn_añadir);
             this.tp_añadir.Controls.Add(this.txt_fonoañ);
             this.tp_añadir.Controls.Add(this.txt_direccionañ);
@@ -364,6 +366,15 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Lista de las Empresas";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(113, 272);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 39);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Hola";
+            // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -425,5 +436,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
