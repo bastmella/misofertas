@@ -17,13 +17,6 @@ namespace MisOfertasDesktop
             InitializeComponent();
         }
 
-        private void Empresas_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'dt_empresas.EMPRESA' Puede moverla o quitarla según sea necesario.
-            this.eMPRESATableAdapter.Fill(this.dt_empresas.EMPRESA);
-
-        }
-
         private void tabPage3_Click(object sender, EventArgs e)
         {
 

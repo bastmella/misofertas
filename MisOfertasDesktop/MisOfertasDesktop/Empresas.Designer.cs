@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btn_atras = new System.Windows.Forms.Button();
-            this.dt_empresas = new MisOfertasDesktop.dt_empresas();
             this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eMPRESATableAdapter = new MisOfertasDesktop.dt_empresasTableAdapters.EMPRESATableAdapter();
             this.tc_mantenedores = new System.Windows.Forms.TabControl();
             this.tp_añadir = new System.Windows.Forms.TabPage();
             this.btn_añadir = new System.Windows.Forms.Button();
@@ -61,8 +59,6 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_empresas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).BeginInit();
             this.tc_mantenedores.SuspendLayout();
             this.tp_añadir.SuspendLayout();
             this.tp_modificar.SuspendLayout();
@@ -80,19 +76,7 @@
             this.btn_atras.Text = "Atrás";
             this.btn_atras.UseVisualStyleBackColor = true;
             // 
-            // dt_empresas
             // 
-            this.dt_empresas.DataSetName = "dt_empresas";
-            this.dt_empresas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPRESABindingSource
-            // 
-            this.eMPRESABindingSource.DataMember = "EMPRESA";
-            this.eMPRESABindingSource.DataSource = this.dt_empresas;
-            // 
-            // eMPRESATableAdapter
-            // 
-            this.eMPRESATableAdapter.ClearBeforeFill = true;
             // 
             // tc_mantenedores
             // 
@@ -375,9 +359,6 @@
             this.Controls.Add(this.btn_atras);
             this.Name = "Empresas";
             this.Text = "Mantenedor de Empresas";
-            this.Load += new System.EventHandler(this.Empresas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dt_empresas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPRESABindingSource)).EndInit();
             this.tc_mantenedores.ResumeLayout(false);
             this.tp_añadir.ResumeLayout(false);
             this.tp_añadir.PerformLayout();
@@ -394,9 +375,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_atras;
-        private dt_empresas dt_empresas;
         private System.Windows.Forms.BindingSource eMPRESABindingSource;
-        private dt_empresasTableAdapters.EMPRESATableAdapter eMPRESATableAdapter;
         private System.Windows.Forms.TabControl tc_mantenedores;
         private System.Windows.Forms.TabPage tp_añadir;
         private System.Windows.Forms.TabPage tp_modificar;
