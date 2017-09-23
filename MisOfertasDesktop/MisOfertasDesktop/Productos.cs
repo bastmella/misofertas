@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace MisOfertasDesktop
 {
-    public partial class Empresas : Form
+    public partial class Productos : Form
     {
-        public Empresas()
+        public Productos()
         {
             InitializeComponent();
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
+        private void label26_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
