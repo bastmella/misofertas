@@ -44,12 +44,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -60,7 +54,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -237,66 +238,6 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(148, 113);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 28);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(314, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 28);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.textBox15);
-            this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(560, 147);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Eliminar";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(241, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(241, 53);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(134, 20);
-            this.textBox15.TabIndex = 3;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(137, 52);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(98, 18);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "ID Producto";
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(388, 15);
@@ -382,6 +323,66 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Nombre";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(148, 113);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 28);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(314, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 28);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Modificar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.textBox15);
+            this.tabPage3.Controls.Add(this.label25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(560, 147);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Eliminar";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(241, 106);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Eliminar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(241, 53);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(134, 20);
+            this.textBox15.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(137, 52);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(98, 18);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "ID Producto";
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(488, 5);
@@ -392,11 +393,22 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(228, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 22);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Mis Ofertas";
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 332);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label26);
@@ -451,5 +463,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label6;
     }
 }

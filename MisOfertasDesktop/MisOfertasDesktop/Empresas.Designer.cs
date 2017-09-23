@@ -60,6 +60,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.eMPRESABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button5 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.tc_mantenedores.SuspendLayout();
             this.tp_añadir.SuspendLayout();
             this.tp_modificar.SuspendLayout();
@@ -72,7 +73,7 @@
             // 
             this.btn_atras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_atras.Location = new System.Drawing.Point(9, 418);
-            this.btn_atras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_atras.Margin = new System.Windows.Forms.Padding(2);
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(88, 35);
             this.btn_atras.TabIndex = 0;
@@ -85,7 +86,7 @@
             this.tc_mantenedores.Controls.Add(this.tp_modificar);
             this.tc_mantenedores.Controls.Add(this.tp_eliminar);
             this.tc_mantenedores.Location = new System.Drawing.Point(9, 11);
-            this.tc_mantenedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tc_mantenedores.Margin = new System.Windows.Forms.Padding(2);
             this.tc_mantenedores.Name = "tc_mantenedores";
             this.tc_mantenedores.SelectedIndex = 0;
             this.tc_mantenedores.Size = new System.Drawing.Size(665, 216);
@@ -104,9 +105,9 @@
             this.tp_añadir.Controls.Add(this.label1);
             this.tp_añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tp_añadir.Location = new System.Drawing.Point(4, 22);
-            this.tp_añadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_añadir.Margin = new System.Windows.Forms.Padding(2);
             this.tp_añadir.Name = "tp_añadir";
-            this.tp_añadir.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_añadir.Padding = new System.Windows.Forms.Padding(2);
             this.tp_añadir.Size = new System.Drawing.Size(657, 190);
             this.tp_añadir.TabIndex = 0;
             this.tp_añadir.Text = "Añadir";
@@ -115,7 +116,7 @@
             // btn_añadir
             // 
             this.btn_añadir.Location = new System.Drawing.Point(297, 147);
-            this.btn_añadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_añadir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_añadir.Name = "btn_añadir";
             this.btn_añadir.Size = new System.Drawing.Size(91, 36);
             this.btn_añadir.TabIndex = 8;
@@ -125,7 +126,7 @@
             // txt_fonoañ
             // 
             this.txt_fonoañ.Location = new System.Drawing.Point(426, 82);
-            this.txt_fonoañ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_fonoañ.Margin = new System.Windows.Forms.Padding(2);
             this.txt_fonoañ.Name = "txt_fonoañ";
             this.txt_fonoañ.Size = new System.Drawing.Size(221, 29);
             this.txt_fonoañ.TabIndex = 7;
@@ -133,7 +134,7 @@
             // txt_direccionañ
             // 
             this.txt_direccionañ.Location = new System.Drawing.Point(426, 14);
-            this.txt_direccionañ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_direccionañ.Margin = new System.Windows.Forms.Padding(2);
             this.txt_direccionañ.Name = "txt_direccionañ";
             this.txt_direccionañ.Size = new System.Drawing.Size(221, 29);
             this.txt_direccionañ.TabIndex = 6;
@@ -141,7 +142,7 @@
             // txt_nombreañ
             // 
             this.txt_nombreañ.Location = new System.Drawing.Point(91, 82);
-            this.txt_nombreañ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nombreañ.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombreañ.Name = "txt_nombreañ";
             this.txt_nombreañ.Size = new System.Drawing.Size(233, 29);
             this.txt_nombreañ.TabIndex = 5;
@@ -149,7 +150,7 @@
             // txt_rutañ
             // 
             this.txt_rutañ.Location = new System.Drawing.Point(91, 15);
-            this.txt_rutañ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_rutañ.Margin = new System.Windows.Forms.Padding(2);
             this.txt_rutañ.Name = "txt_rutañ";
             this.txt_rutañ.Size = new System.Drawing.Size(233, 29);
             this.txt_rutañ.TabIndex = 4;
@@ -210,9 +211,9 @@
             this.tp_modificar.Controls.Add(this.label8);
             this.tp_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tp_modificar.Location = new System.Drawing.Point(4, 22);
-            this.tp_modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.tp_modificar.Name = "tp_modificar";
-            this.tp_modificar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_modificar.Padding = new System.Windows.Forms.Padding(2);
             this.tp_modificar.Size = new System.Drawing.Size(657, 190);
             this.tp_modificar.TabIndex = 1;
             this.tp_modificar.Text = "Modificar";
@@ -221,7 +222,7 @@
             // btn_buscar
             // 
             this.btn_buscar.Location = new System.Drawing.Point(153, 144);
-            this.btn_buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(91, 36);
             this.btn_buscar.TabIndex = 18;
@@ -231,7 +232,7 @@
             // btn_modificar
             // 
             this.btn_modificar.Location = new System.Drawing.Point(490, 144);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(91, 36);
             this.btn_modificar.TabIndex = 17;
@@ -241,7 +242,7 @@
             // txt_fonomod
             // 
             this.txt_fonomod.Location = new System.Drawing.Point(428, 81);
-            this.txt_fonomod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_fonomod.Margin = new System.Windows.Forms.Padding(2);
             this.txt_fonomod.Name = "txt_fonomod";
             this.txt_fonomod.Size = new System.Drawing.Size(221, 29);
             this.txt_fonomod.TabIndex = 16;
@@ -249,7 +250,7 @@
             // txt_direcmod
             // 
             this.txt_direcmod.Location = new System.Drawing.Point(428, 13);
-            this.txt_direcmod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_direcmod.Margin = new System.Windows.Forms.Padding(2);
             this.txt_direcmod.Name = "txt_direcmod";
             this.txt_direcmod.Size = new System.Drawing.Size(221, 29);
             this.txt_direcmod.TabIndex = 15;
@@ -257,7 +258,7 @@
             // txt_nombremod
             // 
             this.txt_nombremod.Location = new System.Drawing.Point(93, 81);
-            this.txt_nombremod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nombremod.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombremod.Name = "txt_nombremod";
             this.txt_nombremod.Size = new System.Drawing.Size(233, 29);
             this.txt_nombremod.TabIndex = 14;
@@ -265,7 +266,7 @@
             // txt_rutmod
             // 
             this.txt_rutmod.Location = new System.Drawing.Point(93, 15);
-            this.txt_rutmod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_rutmod.Margin = new System.Windows.Forms.Padding(2);
             this.txt_rutmod.Name = "txt_rutmod";
             this.txt_rutmod.Size = new System.Drawing.Size(233, 29);
             this.txt_rutmod.TabIndex = 13;
@@ -317,9 +318,9 @@
             this.tp_eliminar.Controls.Add(this.label9);
             this.tp_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tp_eliminar.Location = new System.Drawing.Point(4, 22);
-            this.tp_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.tp_eliminar.Name = "tp_eliminar";
-            this.tp_eliminar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tp_eliminar.Padding = new System.Windows.Forms.Padding(2);
             this.tp_eliminar.Size = new System.Drawing.Size(657, 190);
             this.tp_eliminar.TabIndex = 2;
             this.tp_eliminar.Text = "Eliminar";
@@ -329,7 +330,7 @@
             // btn_eliminar
             // 
             this.btn_eliminar.Location = new System.Drawing.Point(296, 127);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(91, 36);
             this.btn_eliminar.TabIndex = 19;
@@ -339,7 +340,7 @@
             // txt_rutel
             // 
             this.txt_rutel.Location = new System.Drawing.Point(256, 53);
-            this.txt_rutel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_rutel.Margin = new System.Windows.Forms.Padding(2);
             this.txt_rutel.Name = "txt_rutel";
             this.txt_rutel.Size = new System.Drawing.Size(233, 29);
             this.txt_rutel.TabIndex = 15;
@@ -360,7 +361,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 281);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 31;
@@ -388,17 +389,28 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(271, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 22);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Mis Ofertas";
+            // 
             // Empresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 397);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tc_mantenedores);
             this.Controls.Add(this.btn_atras);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Empresas";
             this.Text = "Mantenedor de Empresas";
             this.tc_mantenedores.ResumeLayout(false);
@@ -448,5 +460,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label11;
     }
 }
