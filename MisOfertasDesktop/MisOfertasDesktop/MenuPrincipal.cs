@@ -23,5 +23,12 @@ namespace MisOfertasDesktop
             mant.Show();
             this.Hide();
         }
+
+        private void btn_ofertas_Click(object sender, EventArgs e)
+        {
+            Ofertas ofer = new Ofertas();
+            ofer.Show();
+            this.Hide();
+        }
     }
 }

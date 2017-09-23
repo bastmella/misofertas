@@ -66,6 +66,7 @@
             this.btn_ofertas.TabIndex = 0;
             this.btn_ofertas.Text = "Ofertas";
             this.btn_ofertas.UseVisualStyleBackColor = true;
+            this.btn_ofertas.Click += new System.EventHandler(this.btn_ofertas_Click);
             // 
             // MenuPrincipal
             // 
