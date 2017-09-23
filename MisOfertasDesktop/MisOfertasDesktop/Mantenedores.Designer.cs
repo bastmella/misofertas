@@ -34,19 +34,21 @@
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_empresas = new System.Windows.Forms.Button();
             this.btn_atras = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_productos);
             this.panel1.Controls.Add(this.btn_descuentos);
             this.panel1.Controls.Add(this.btn_usuarios);
             this.panel1.Controls.Add(this.btn_empresas);
-            this.panel1.Location = new System.Drawing.Point(22, 28);
+            this.panel1.Location = new System.Drawing.Point(22, 22);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(433, 248);
+            this.panel1.Size = new System.Drawing.Size(433, 254);
             this.panel1.TabIndex = 0;
             // 
             // btn_productos
@@ -105,6 +107,16 @@
             this.btn_atras.Text = "Atras";
             this.btn_atras.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(157, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Mis Ofertas";
+            // 
             // Mantenedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +129,7 @@
             this.Text = "Mantenedores";
             this.Load += new System.EventHandler(this.Mantenedores_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Button btn_usuarios;
         private System.Windows.Forms.Button btn_empresas;
         private System.Windows.Forms.Button btn_atras;
+        private System.Windows.Forms.Label label1;
     }
 }
