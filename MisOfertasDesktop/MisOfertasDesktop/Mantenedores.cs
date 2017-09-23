@@ -16,5 +16,15 @@ namespace MisOfertasDesktop
         {
             InitializeComponent();
         }
+
+        private void Mantenedores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_empresas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

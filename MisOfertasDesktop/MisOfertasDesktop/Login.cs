@@ -32,5 +32,10 @@ namespace MisOfertasDesktop
             txt_pass.UseSystemPasswordChar = true;
             txt_pass.Text = "";
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

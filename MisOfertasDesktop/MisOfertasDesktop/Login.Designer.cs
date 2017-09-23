@@ -33,6 +33,7 @@
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,18 +43,20 @@
             this.panel1.Controls.Add(this.btn_ingresar);
             this.panel1.Controls.Add(this.txt_pass);
             this.panel1.Controls.Add(this.txt_user);
-            this.panel1.Location = new System.Drawing.Point(74, 118);
+            this.panel1.Location = new System.Drawing.Point(45, 70);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 447);
+            this.panel1.Size = new System.Drawing.Size(352, 233);
             this.panel1.TabIndex = 0;
             // 
             // chb_recordar
             // 
             this.chb_recordar.AutoSize = true;
             this.chb_recordar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chb_recordar.Location = new System.Drawing.Point(169, 359);
+            this.chb_recordar.Location = new System.Drawing.Point(124, 193);
+            this.chb_recordar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chb_recordar.Name = "chb_recordar";
-            this.chb_recordar.Size = new System.Drawing.Size(173, 33);
+            this.chb_recordar.Size = new System.Drawing.Size(105, 21);
             this.chb_recordar.TabIndex = 3;
             this.chb_recordar.Text = "Recordarme";
             this.chb_recordar.UseVisualStyleBackColor = true;
@@ -61,9 +64,10 @@
             // btn_ingresar
             // 
             this.btn_ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ingresar.Location = new System.Drawing.Point(169, 261);
+            this.btn_ingresar.Location = new System.Drawing.Point(92, 141);
+            this.btn_ingresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ingresar.Name = "btn_ingresar";
-            this.btn_ingresar.Size = new System.Drawing.Size(298, 62);
+            this.btn_ingresar.Size = new System.Drawing.Size(163, 34);
             this.btn_ingresar.TabIndex = 2;
             this.btn_ingresar.Text = "Ingresar";
             this.btn_ingresar.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@
             this.txt_pass.BackColor = System.Drawing.SystemColors.Window;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_pass.Location = new System.Drawing.Point(169, 169);
+            this.txt_pass.Location = new System.Drawing.Point(92, 92);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(298, 49);
+            this.txt_pass.Size = new System.Drawing.Size(164, 31);
             this.txt_pass.TabIndex = 1;
             this.txt_pass.Text = "Contraseña";
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -87,25 +92,40 @@
             this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_user.Location = new System.Drawing.Point(169, 78);
+            this.txt_user.Location = new System.Drawing.Point(92, 42);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_user.Name = "txt_user";
-            this.txt_user.Size = new System.Drawing.Size(298, 49);
+            this.txt_user.Size = new System.Drawing.Size(164, 31);
             this.txt_user.TabIndex = 0;
             this.txt_user.Text = "Usuario";
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_user.Click += new System.EventHandler(this.txt_user_Click);
             // 
-            // Form1
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(148, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mis Ofertas";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 635);
+            this.ClientSize = new System.Drawing.Size(445, 344);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Login";
             this.Text = "Autenticaión de usuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,6 +136,7 @@
         private System.Windows.Forms.Button btn_ingresar;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.Label label1;
     }
 }
 
