@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Data.OracleClient;
+using System.Configuration;
+using Oracle.ManagedDataAccess.Client;
 
 namespace MisOfertasDesktop
 {
@@ -19,9 +22,17 @@ namespace MisOfertasDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
+            string oradb = ConfigurationManager.ConnectionStrings["MisOfertasDesktop.Properties.Settings.ConnectionString"].ConnectionString;
+            OracleConnection conn = new OracleConnection();
+            conn.ConnectionString = oradb;
+            try
+            {
+                conn.Open();
+                MessageBox.Show(conn.State.ToString());
+            }catch (Exception ex) { MessageBox.Show(ex.Message); }
+            /*MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
      
