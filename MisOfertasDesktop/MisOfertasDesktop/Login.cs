@@ -55,12 +55,23 @@ namespace MisOfertasDesktop
                 OraCmd.ExecuteNonQuery();
                 
                 object mensaje = OraCmd.Parameters["p_message"].Value;
+               
 
                 if (mensaje.ToString() == "CORRECTO")
                 {
-                    MenuPrincipal menu = new MenuPrincipal();
-                    menu.Show();
-                    this.Hide();
+                    if (OraCmd.Parameters["p_rol"].Value.ToString().Equals("Encargado de tienda"))
+                    {
+                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MenuAdministrador menu = new MenuAdministrador();
+                        menu.Show();
+                        this.Hide();
+                    }
+                    
                 }
                 else
                 {

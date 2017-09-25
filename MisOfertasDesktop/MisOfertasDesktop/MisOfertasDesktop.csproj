@@ -68,6 +68,18 @@
     <Compile Include="Empresas.Designer.cs">
       <DependentUpon>Empresas.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdministrador.Designer.cs">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEncargadoTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuEncargadoTienda.Designer.cs">
+      <DependentUpon>MenuEncargadoTienda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ofertas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedores.resx">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdministrador.resx">
+      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEncargadoTienda.resx">
+      <DependentUpon>MenuEncargadoTienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
