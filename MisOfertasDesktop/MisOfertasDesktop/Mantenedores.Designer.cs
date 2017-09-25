@@ -99,7 +99,7 @@
             // 
             // btn_empresas
             // 
-            this.btn_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_empresas.Location = new System.Drawing.Point(34, 40);
             this.btn_empresas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_empresas.Name = "btn_empresas";
