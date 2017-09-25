@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.btn_descuentos);
             this.panel1.Controls.Add(this.btn_usuarios);
             this.panel1.Controls.Add(this.btn_empresas);
-            this.panel1.Location = new System.Drawing.Point(22, 22);
+            this.panel1.Location = new System.Drawing.Point(38, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(433, 254);
@@ -117,7 +117,7 @@
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(94, 36);
             this.btn_atras.TabIndex = 1;
-            this.btn_atras.Text = "Atras";
+            this.btn_atras.Text = "Atrás";
             this.btn_atras.UseVisualStyleBackColor = true;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
             // 

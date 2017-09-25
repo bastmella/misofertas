@@ -60,14 +60,14 @@ namespace MisOfertasDesktop
                 {
                     if (OraCmd.Parameters["p_rol"].Value.ToString().Equals("Encargado de tienda"))
                     {
-                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
-                        menu.Show();
+                        MenuEncargadoTienda menu1 = new MenuEncargadoTienda();
+                        menu1.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MenuAdministrador menu = new MenuAdministrador();
-                        menu.Show();
+                        MenuAdministrador menu2 = new MenuAdministrador();
+                        menu2.Show();
                         this.Hide();
                     }
                     
