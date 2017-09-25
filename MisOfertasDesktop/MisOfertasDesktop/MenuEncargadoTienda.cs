@@ -35,5 +35,12 @@ namespace MisOfertasDesktop
         {
 
         }
+
+        private void btn_atras_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
     }
 }

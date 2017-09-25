@@ -68,12 +68,6 @@
     <Compile Include="Empresas.Designer.cs">
       <DependentUpon>Empresas.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuAdministrador.Designer.cs">
-      <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuEncargadoTienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +80,11 @@
     <Compile Include="Ofertas.Designer.cs">
       <DependentUpon>Ofertas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenedores.cs">
+    <Compile Include="AdministradorMantenedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenedores.Designer.cs">
-      <DependentUpon>Mantenedores.cs</DependentUpon>
+    <Compile Include="AdministradorMantenedores.Designer.cs">
+      <DependentUpon>AdministradorMantenedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -118,11 +112,8 @@
     <EmbeddedResource Include="Empresas.resx">
       <DependentUpon>Empresas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenedores.resx">
-      <DependentUpon>Mantenedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuAdministrador.resx">
-      <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    <EmbeddedResource Include="AdministradorMantenedores.resx">
+      <DependentUpon>AdministradorMantenedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuEncargadoTienda.resx">
       <DependentUpon>MenuEncargadoTienda.cs</DependentUpon>

@@ -67,7 +67,7 @@ namespace MisOfertasDesktop
                 {
                     if (rol.ToString() == "Administrador")
                     {
-                        MenuAdministrador menu = new MenuAdministrador();
+                        AdministradorMantenedores menu = new AdministradorMantenedores();
                         menu.Show();
                         this.Hide();
                     }

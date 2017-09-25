@@ -44,8 +44,8 @@ namespace MisOfertasDesktop
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MenuAdministrador menu = new MenuAdministrador();
-            menu.Show();
+            AdministradorMantenedores mantenedor = new AdministradorMantenedores();
+            mantenedor.Show();
             this.Hide();
         }
 

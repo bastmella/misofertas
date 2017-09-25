@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MisOfertasDesktop
 {
-    public partial class Mantenedores : Form
+    public partial class AdministradorMantenedores : Form
     {
-        public Mantenedores()
+        public AdministradorMantenedores()
         {
             InitializeComponent();
         }
@@ -54,6 +54,13 @@ namespace MisOfertasDesktop
         {
             Productos prod = new Productos();
             prod.Show();
+            this.Hide();
+        }
+
+        private void btn_ofertas_Click(object sender, EventArgs e)
+        {
+            Ofertas ofer = new Ofertas();
+            ofer.Show();
             this.Hide();
         }
     }
