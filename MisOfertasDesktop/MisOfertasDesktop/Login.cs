@@ -47,12 +47,27 @@ namespace MisOfertasDesktop
                 OraCmd.CommandType = CommandType.StoredProcedure;
                 OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_user.Text;
                 OraCmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = txt_pass.Text;
+                OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
 
+                OraCmd.Parameters["p_message"].Size = 255;
+                OracleDataReader dr = OraCmd.ExecuteReader();
+                
+                OraCmd.ExecuteNonQuery();
+                
+                object mensaje = OraCmd.Parameters["p_message"].Value;
+
+                if (mensaje.ToString() == "CORRECTO")
+                {
+                    MenuPrincipal menu = new MenuPrincipal();
+                    menu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario incorrecto", "Aviso");
+                }
             }
-            
-            /*MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Hide();*/
+
         }
 
      
@@ -69,6 +84,11 @@ namespace MisOfertasDesktop
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_pass_TextChanged(object sender, EventArgs e)
         {
 
         }
