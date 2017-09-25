@@ -89,12 +89,13 @@ namespace MisOfertasDesktop
 
                 //OraCmd.Parameters.Add("Action", "Insert");
                 OraCmd.Parameters.Add("p_rut", txt_rut.Text);
-                OraCmd.Parameters.Add("P_password", txt_pass.Text);
+                OraCmd.Parameters.Add("p_password", txt_pass.Text);
+                OraCmd.Parameters.Add("p_nombre", txt_pass.Text);
                 OraCmd.Parameters.Add("p_apellido", txt_nombre.Text);
                 OraCmd.Parameters.Add("p_correo", txt_rut.Text);
                 OraCmd.Parameters.Add("p_fono", txt_pass.Text);
                 OraCmd.Parameters.Add("p_direccion", txt_nombre.Text);
-
+                OraCmd.Parameters.Add("p_rol", comboBox1.Text);
                 OraCmd.ExecuteNonQuery();
                 
             }

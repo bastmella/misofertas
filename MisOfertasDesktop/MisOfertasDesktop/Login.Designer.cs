@@ -39,22 +39,28 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.chb_recordar);
             this.panel1.Controls.Add(this.btn_ingresar);
             this.panel1.Controls.Add(this.txt_pass);
             this.panel1.Controls.Add(this.txt_user);
-            this.panel1.Location = new System.Drawing.Point(83, 129);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(85, 141);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 430);
+            this.panel1.Size = new System.Drawing.Size(643, 440);
             this.panel1.TabIndex = 0;
             // 
             // chb_recordar
             // 
+            this.chb_recordar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chb_recordar.AutoSize = true;
             this.chb_recordar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chb_recordar.Location = new System.Drawing.Point(227, 356);
-            this.chb_recordar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chb_recordar.Margin = new System.Windows.Forms.Padding(4);
             this.chb_recordar.Name = "chb_recordar";
             this.chb_recordar.Size = new System.Drawing.Size(173, 33);
             this.chb_recordar.TabIndex = 3;
@@ -65,7 +71,7 @@
             // 
             this.btn_ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ingresar.Location = new System.Drawing.Point(169, 260);
-            this.btn_ingresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ingresar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(299, 63);
             this.btn_ingresar.TabIndex = 2;
@@ -79,8 +85,9 @@
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_pass.Location = new System.Drawing.Point(169, 170);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
+            this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(297, 49);
             this.txt_pass.TabIndex = 1;
             this.txt_pass.Text = "Contraseña";
@@ -94,7 +101,7 @@
             this.txt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_user.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txt_user.Location = new System.Drawing.Point(169, 78);
-            this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(4);
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(297, 49);
             this.txt_user.TabIndex = 0;
@@ -104,6 +111,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(271, 46);
@@ -119,11 +129,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(816, 635);
+            this.ClientSize = new System.Drawing.Size(822, 658);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Autenticaión de usuario";
             this.panel1.ResumeLayout(false);

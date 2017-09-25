@@ -50,7 +50,6 @@ namespace MisOfertasDesktop
                 OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
 
                 OraCmd.Parameters["p_message"].Size = 255;
-                OracleDataReader dr = OraCmd.ExecuteReader();
                 
                 OraCmd.ExecuteNonQuery();
                 
@@ -80,6 +79,7 @@ namespace MisOfertasDesktop
         private void txt_pass_Click(object sender, EventArgs e)
         {
             txt_pass.UseSystemPasswordChar = true;
+       
             txt_pass.Text = "";
         }
 
