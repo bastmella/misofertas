@@ -30,5 +30,10 @@ namespace MisOfertasDesktop
             menu.Show();
             this.Hide();
         }
+
+        private void MenuEncargadoTienda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
