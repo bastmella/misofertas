@@ -33,19 +33,19 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_fono = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_correo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_apellido = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_rut = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
@@ -109,19 +109,19 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.txt_pass);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.txt_direccion);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.txt_fono);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.txt_correo);
             this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.txt_apellido);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txt_nombre);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txt_rut);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -140,13 +140,15 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // txt_pass
             // 
-            this.textBox7.Location = new System.Drawing.Point(368, 80);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 20);
-            this.textBox7.TabIndex = 13;
+            this.txt_pass.Location = new System.Drawing.Point(368, 80);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.Size = new System.Drawing.Size(117, 20);
+            this.txt_pass.TabIndex = 13;
+            this.txt_pass.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label17
             // 
@@ -158,12 +160,12 @@
             this.label17.TabIndex = 12;
             this.label17.Text = "Contraseña";
             // 
-            // textBox6
+            // txt_direccion
             // 
-            this.textBox6.Location = new System.Drawing.Point(368, 46);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(117, 20);
-            this.textBox6.TabIndex = 11;
+            this.txt_direccion.Location = new System.Drawing.Point(368, 46);
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(117, 20);
+            this.txt_direccion.TabIndex = 11;
             // 
             // label16
             // 
@@ -175,12 +177,12 @@
             this.label16.TabIndex = 10;
             this.label16.Text = "Dirección";
             // 
-            // textBox5
+            // txt_fono
             // 
-            this.textBox5.Location = new System.Drawing.Point(368, 13);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(117, 20);
-            this.textBox5.TabIndex = 9;
+            this.txt_fono.Location = new System.Drawing.Point(368, 13);
+            this.txt_fono.Name = "txt_fono";
+            this.txt_fono.Size = new System.Drawing.Size(117, 20);
+            this.txt_fono.TabIndex = 9;
             // 
             // label15
             // 
@@ -192,12 +194,12 @@
             this.label15.TabIndex = 8;
             this.label15.Text = "Fono";
             // 
-            // textBox4
+            // txt_correo
             // 
-            this.textBox4.Location = new System.Drawing.Point(70, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(134, 20);
-            this.textBox4.TabIndex = 7;
+            this.txt_correo.Location = new System.Drawing.Point(70, 111);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(134, 20);
+            this.txt_correo.TabIndex = 7;
             // 
             // label14
             // 
@@ -209,12 +211,12 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Correo";
             // 
-            // textBox3
+            // txt_apellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(70, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 20);
-            this.textBox3.TabIndex = 5;
+            this.txt_apellido.Location = new System.Drawing.Point(70, 77);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Size = new System.Drawing.Size(134, 20);
+            this.txt_apellido.TabIndex = 5;
             // 
             // label13
             // 
@@ -226,12 +228,12 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Apellido";
             // 
-            // textBox2
+            // txt_nombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(70, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 20);
-            this.textBox2.TabIndex = 3;
+            this.txt_nombre.Location = new System.Drawing.Point(70, 47);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(134, 20);
+            this.txt_nombre.TabIndex = 3;
             // 
             // label12
             // 
@@ -243,12 +245,12 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Nombre";
             // 
-            // textBox1
+            // txt_rut
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_rut.Location = new System.Drawing.Point(70, 16);
+            this.txt_rut.Name = "txt_rut";
+            this.txt_rut.Size = new System.Drawing.Size(134, 20);
+            this.txt_rut.TabIndex = 1;
             // 
             // label11
             // 
@@ -518,19 +520,19 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_fono;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_rut;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button3;
