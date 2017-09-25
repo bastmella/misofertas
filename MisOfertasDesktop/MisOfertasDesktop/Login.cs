@@ -42,31 +42,38 @@ namespace MisOfertasDesktop
             using (OracleConnection OraConn = Conectar())
             {
                 OracleCommand OraCmd = new OracleCommand();
+
                 OraCmd.Connection = OraConn;
                 OraCmd.CommandText = "valid_user";
+
                 OraCmd.CommandType = CommandType.StoredProcedure;
                 OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_user.Text;
                 OraCmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = txt_pass.Text;
                 OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
+                OraCmd.Parameters.Add(new OracleParameter("p_rol", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
+
 
                 OraCmd.Parameters["p_message"].Size = 255;
-                
+                OraCmd.Parameters["p_rol"].Size = 255;
+
                 OraCmd.ExecuteNonQuery();
-                
+
                 object mensaje = OraCmd.Parameters["p_message"].Value;
-               
+                object rol = OraCmd.Parameters["p_rol"].Value;
+
+
 
                 if (mensaje.ToString() == "CORRECTO")
                 {
-                    if (OraCmd.Parameters["p_rol"].Value.ToString().Equals("Encargado de tienda"))
+                    if (rol.ToString() == "Administrador")
                     {
-                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
+                        MenuAdministrador menu = new MenuAdministrador();
                         menu.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MenuAdministrador menu = new MenuAdministrador();
+                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
                         menu.Show();
                         this.Hide();
                     }
