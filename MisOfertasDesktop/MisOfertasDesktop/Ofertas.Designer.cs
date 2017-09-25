@@ -514,7 +514,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(123, 44);
             this.button7.TabIndex = 7;
-            this.button7.Text = "Menú";
+            this.button7.Text = "Salir";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 

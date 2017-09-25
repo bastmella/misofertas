@@ -106,5 +106,15 @@ namespace MisOfertasDesktop
         {
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

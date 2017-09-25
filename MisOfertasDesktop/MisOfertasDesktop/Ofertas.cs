@@ -20,9 +20,10 @@ namespace MisOfertasDesktop
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MenuEncargadoTienda menu = new MenuEncargadoTienda();
-            menu.Show();
-            this.Hide();
+            /*MenuEncargadoTienda menu = new MenuEncargadoTienda();
+            menu.Show();*/
+            this.Close();
+         
         }
     }
 }

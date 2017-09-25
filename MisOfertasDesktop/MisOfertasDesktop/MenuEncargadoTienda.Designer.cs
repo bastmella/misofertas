@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(24, 152);
+            this.button1.Location = new System.Drawing.Point(371, 134);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 120);
@@ -51,7 +51,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(375, 152);
+            this.button2.Location = new System.Drawing.Point(46, 134);
             this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(300, 120);

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using Oracle.ManagedDataAccess.Client;
 
+
 namespace MisOfertasDesktop
 {
     public partial class Login : Form
@@ -52,6 +53,7 @@ namespace MisOfertasDesktop
                 OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
                 OraCmd.Parameters.Add(new OracleParameter("p_rol", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
 
+                
 
                 OraCmd.Parameters["p_message"].Size = 255;
                 OraCmd.Parameters["p_rol"].Size = 255;
