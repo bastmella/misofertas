@@ -69,15 +69,19 @@ namespace MisOfertasDesktop
                 {
                     if (rol.ToString() == "Administrador")
                     {
-                        AdministradorMantenedores menu = new AdministradorMantenedores();
+                        MenuAdministrador menu = new MenuAdministrador();
+                        menu.Show();
+                        this.Hide();
+                    }
+                    else if (rol.ToString() == "Encargado de tienda")
+                    {
+                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
                         menu.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
-                        menu.Show();
-                        this.Hide();
+                        MessageBox.Show("Este Usuario no posee privilegios para acceder", "Aviso");
                     }
                     
                 }

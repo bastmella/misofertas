@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_descuentos = new System.Windows.Forms.Button();
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_empresas = new System.Windows.Forms.Button();
             this.btn_atras = new System.Windows.Forms.Button();
-            this.btn_ofertas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_ofertas);
+            this.panel1.Controls.Add(this.btnProductos);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_descuentos);
             this.panel1.Controls.Add(this.btn_usuarios);
@@ -50,6 +50,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 469);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Location = new System.Drawing.Point(424, 276);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(300, 120);
+            this.btnProductos.TabIndex = 3;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // label1
             // 
@@ -61,6 +74,7 @@
             this.label1.Size = new System.Drawing.Size(236, 49);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mis Ofertas";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_descuentos
             // 
@@ -106,21 +120,9 @@
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(172, 66);
             this.btn_atras.TabIndex = 1;
-            this.btn_atras.Text = "Salir";
+            this.btn_atras.Text = "Atras";
             this.btn_atras.UseVisualStyleBackColor = true;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
-            // 
-            // btn_ofertas
-            // 
-            this.btn_ofertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ofertas.Location = new System.Drawing.Point(424, 276);
-            this.btn_ofertas.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ofertas.Name = "btn_ofertas";
-            this.btn_ofertas.Size = new System.Drawing.Size(300, 120);
-            this.btn_ofertas.TabIndex = 3;
-            this.btn_ofertas.Text = "Ofertas";
-            this.btn_ofertas.UseVisualStyleBackColor = true;
-            this.btn_ofertas.Click += new System.EventHandler(this.btn_ofertas_Click);
             // 
             // AdministradorMantenedores
             // 
@@ -147,6 +149,6 @@
         private System.Windows.Forms.Button btn_empresas;
         private System.Windows.Forms.Button btn_atras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_ofertas;
+        private System.Windows.Forms.Button btnProductos;
     }
 }

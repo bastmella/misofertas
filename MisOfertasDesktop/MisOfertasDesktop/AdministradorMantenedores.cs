@@ -31,8 +31,8 @@ namespace MisOfertasDesktop
 
         private void btn_atras_Click(object sender, EventArgs e)
         {
-            Login log = new Login();
-            log.Show();
+            MenuAdministrador menu = new MenuAdministrador();
+            menu.Show();
             this.Hide();
         }
 
@@ -50,18 +50,21 @@ namespace MisOfertasDesktop
             this.Hide();
         }
 
-        private void btn_productos_Click(object sender, EventArgs e)
+        private void btnProductos_Click(object sender, EventArgs e)
         {
             Productos prod = new Productos();
             prod.Show();
             this.Hide();
         }
 
-        private void btn_ofertas_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Ofertas ofer = new Ofertas();
-            ofer.Show();
-            this.Hide();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
