@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //using System.Data.OracleClient;
 using System.Configuration;
-using Oracle.ManagedDataAccess.Client;
+using Oracle.DataAccess.Client;
 
 
 namespace MisOfertasDesktop
@@ -23,8 +23,8 @@ namespace MisOfertasDesktop
 
         private OracleConnection Conectar()
         {
-            string CadenaConexion = ConfigurationManager.ConnectionStrings["MisOfertasDesktop.Properties.Settings.ConnectionString"].ConnectionString;
-            CadenaConexion = string.Format(CadenaConexion, "BDMISOFERTAS", "bsam123");
+            string CadenaConexion = ConfigurationManager.ConnectionStrings["MisOfertas"].ConnectionString;
+            CadenaConexion = string.Format(CadenaConexion, "sysdba", "syspass");
             OracleConnection conn = new OracleConnection();
             conn.ConnectionString = CadenaConexion;
             try

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using Oracle.ManagedDataAccess.Client;
+using Oracle.DataAccess.Client;
 
 namespace MisOfertasDesktop
 {
