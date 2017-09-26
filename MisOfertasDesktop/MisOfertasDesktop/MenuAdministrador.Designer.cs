@@ -78,7 +78,7 @@
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(300, 120);
             this.btnReporte.TabIndex = 1;
-            this.btnReporte.Text = "Descarga Reporte";
+            this.btnReporte.Text = "Reporte Resumen";
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 

@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,8 +78,10 @@
             this.txt_pass.TabIndex = 1;
             this.txt_pass.Text = "Contraseña";
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_pass.Click += new System.EventHandler(this.txt_pass_Click);
             this.txt_pass.TextChanged += new System.EventHandler(this.txt_pass_TextChanged);
+            this.txt_pass.Enter += new System.EventHandler(this.txt_pass_Enter);
+            this.txt_pass.Leave += new System.EventHandler(this.txt_pass_Leave);
+            this.txt_pass.Validated += new System.EventHandler(this.txt_pass_Validated);
             // 
             // txt_user
             // 
@@ -90,7 +95,9 @@
             this.txt_user.TabIndex = 0;
             this.txt_user.Text = "Usuario";
             this.txt_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_user.Click += new System.EventHandler(this.txt_user_Click);
+            this.txt_user.Enter += new System.EventHandler(this.txt_user_Enter);
+            this.txt_user.Leave += new System.EventHandler(this.txt_user_Leave);
+            this.txt_user.Validated += new System.EventHandler(this.txt_user_Validated);
             // 
             // label1
             // 
@@ -107,6 +114,10 @@
             this.label1.Text = "Mis Ofertas";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -121,6 +132,7 @@
             this.Text = "Autenticaión de usuario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +145,7 @@
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider epError;
     }
 }
 

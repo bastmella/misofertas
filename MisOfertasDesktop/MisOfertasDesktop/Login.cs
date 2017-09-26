@@ -40,71 +40,64 @@ namespace MisOfertasDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (OracleConnection OraConn = Conectar())
+            if (txt_user.Text == "Usuario" || txt_pass.Text == "Contraseña")
             {
-                OracleCommand OraCmd = new OracleCommand();
-
-                OraCmd.Connection = OraConn;
-                OraCmd.CommandText = "valid_user";
-
-                OraCmd.CommandType = CommandType.StoredProcedure;
-                OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_user.Text;
-                OraCmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = txt_pass.Text;
-                OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
-                OraCmd.Parameters.Add(new OracleParameter("p_rol", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
-
-                
-
-                OraCmd.Parameters["p_message"].Size = 255;
-                OraCmd.Parameters["p_rol"].Size = 255;
-
-                OraCmd.ExecuteNonQuery();
-
-                object mensaje = OraCmd.Parameters["p_message"].Value;
-                object rol = OraCmd.Parameters["p_rol"].Value;
-
-
-
-                if (mensaje.ToString() == "CORRECTO")
+                MessageBox.Show("No deben quedar campos vacios");
+            }
+            else
+            {
+                using (OracleConnection OraConn = Conectar())
                 {
-                    if (rol.ToString() == "Administrador")
+                    OracleCommand OraCmd = new OracleCommand();
+
+                    OraCmd.Connection = OraConn;
+                    OraCmd.CommandText = "valid_user";
+
+                    OraCmd.CommandType = CommandType.StoredProcedure;
+                    OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_user.Text;
+                    OraCmd.Parameters.Add("p_password", OracleDbType.Varchar2).Value = txt_pass.Text;
+                    OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
+                    OraCmd.Parameters.Add(new OracleParameter("p_rol", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
+
+
+
+                    OraCmd.Parameters["p_message"].Size = 255;
+                    OraCmd.Parameters["p_rol"].Size = 255;
+
+                    OraCmd.ExecuteNonQuery();
+
+                    object mensaje = OraCmd.Parameters["p_message"].Value;
+                    object rol = OraCmd.Parameters["p_rol"].Value;
+
+
+
+                    if (mensaje.ToString() == "CORRECTO")
                     {
-                        MenuAdministrador menu = new MenuAdministrador();
-                        menu.Show();
-                        this.Hide();
-                    }
-                    else if (rol.ToString() == "Encargado de tienda")
-                    {
-                        MenuEncargadoTienda menu = new MenuEncargadoTienda();
-                        menu.Show();
-                        this.Hide();
+                        if (rol.ToString() == "Administrador")
+                        {
+                            MenuAdministrador menu = new MenuAdministrador();
+                            menu.Show();
+                            this.Hide();
+                        }
+                        else if (rol.ToString() == "Encargado de tienda")
+                        {
+                            MenuEncargadoTienda menu = new MenuEncargadoTienda();
+                            menu.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Este Usuario no posee privilegios para acceder", "Aviso");
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Este Usuario no posee privilegios para acceder", "Aviso");
+                        MessageBox.Show("Usuario incorrecto", "Aviso");
                     }
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Usuario incorrecto", "Aviso");
                 }
             }
 
-        }
-
-     
-
-        private void txt_user_Click(object sender, EventArgs e)
-        {
-            txt_user.Text = "";
-        }
-
-        private void txt_pass_Click(object sender, EventArgs e)
-        {
-            txt_pass.UseSystemPasswordChar = true;
-       
-            txt_pass.Text = "";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -115,6 +108,68 @@ namespace MisOfertasDesktop
         private void txt_pass_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_user_Validated(object sender, EventArgs e)
+        {
+            if (txt_user.Text.Trim() == "Usuario")
+            {
+                epError.SetError(txt_user, "No puede quedar en blanco");
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txt_pass_Validated(object sender, EventArgs e)
+        {
+            if (txt_pass.Text.Trim() == "Contraseña")
+            {
+                epError.SetError(txt_pass, "No puede quedar en blanco");
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void txt_user_Enter(object sender, EventArgs e)
+        {
+            if(txt_user.Text == "Usuario")
+            {
+                txt_user.Text = "";
+
+                txt_user.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_user_Leave(object sender, EventArgs e)
+        {
+            if(txt_user.Text == "")
+            {
+                txt_user.Text = "Usuario";
+                txt_user.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txt_pass_Enter(object sender, EventArgs e)
+        {
+            if (txt_pass.Text == "Contraseña")
+            {
+                txt_pass.Text = "";
+
+                txt_pass.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_pass_Leave(object sender, EventArgs e)
+        {
+            if (txt_pass.Text == "")
+            {
+                txt_pass.Text = "Contraseña";
+                txt_pass.ForeColor = Color.LightGray;
+            }
         }
     }
 }

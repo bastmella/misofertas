@@ -32,8 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_atras = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.btn_atras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,18 @@
             this.panel1.Size = new System.Drawing.Size(713, 418);
             this.panel1.TabIndex = 5;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold);
+            this.btnReporte.Location = new System.Drawing.Point(206, 254);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(300, 120);
+            this.btnReporte.TabIndex = 4;
+            this.btnReporte.Text = "Reporte Valoración";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // btn_atras
             // 
             this.btn_atras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,18 +111,6 @@
             this.btn_atras.Text = "Salir";
             this.btn_atras.UseVisualStyleBackColor = true;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Bold);
-            this.btnReporte.Location = new System.Drawing.Point(206, 254);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(6);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(300, 120);
-            this.btnReporte.TabIndex = 4;
-            this.btnReporte.Text = "Descarga Reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // MenuEncargadoTienda
             // 
