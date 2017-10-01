@@ -37,5 +37,40 @@ namespace MisOfertasDesktop
             log.Show();
             this.Hide();
         }
+
+        private void ofertasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuarios usu = new Usuarios();
+            usu.Show();
+            this.Hide();
+        }
+
+        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Empresas emp = new Empresas();
+            emp.Show();
+            this.Hide();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Productos prod = new Productos();
+            prod.Show();
+            this.Hide();
+        }
+
+        private void descuentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Descuentos dcto = new Descuentos();
+            dcto.Show();
+            this.Hide();
+        }
+
+        private void resumenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteAdministrador reporte = new ReporteAdministrador();
+            reporte.Show();
+            this.Hide();
+        }
     }
 }

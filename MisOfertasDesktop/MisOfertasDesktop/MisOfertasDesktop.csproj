@@ -153,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteAdministrador.resx">
       <DependentUpon>ReporteAdministrador.cs</DependentUpon>
@@ -175,6 +176,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paisaje.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rojoSinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo-azul.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-colores-colors-degradado-Favim.com-5139531.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th1_83246.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -171,5 +171,19 @@ namespace MisOfertasDesktop
                 txt_pass.ForeColor = Color.LightGray;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MenuAdministrador admin = new MenuAdministrador();
+            admin.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MenuEncargadoTienda encarg = new MenuEncargadoTienda();
+            encarg.Show();
+            this.Hide();
+        }
     }
 }

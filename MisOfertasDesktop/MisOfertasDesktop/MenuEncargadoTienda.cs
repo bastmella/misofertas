@@ -49,5 +49,31 @@ namespace MisOfertasDesktop
             reporte.Show();
             this.Hide();
         }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Productos menu = new Productos();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void ofertasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ofertas menu = new Ofertas();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void valoraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteEncargadoTienda reporte = new ReporteEncargadoTienda();
+            reporte.Show();
+            this.Hide();
+        }
     }
 }
