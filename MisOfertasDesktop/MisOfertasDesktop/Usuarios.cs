@@ -22,7 +22,7 @@ namespace MisOfertasDesktop
         private OracleConnection Conectar()
         {
             string CadenaConexion = ConfigurationManager.ConnectionStrings["MisOfertas"].ConnectionString;
-            CadenaConexion = string.Format(CadenaConexion, "admin", "adminpass");
+            CadenaConexion = string.Format(CadenaConexion, "MisOfertas", "bsam123");
             OracleConnection conn = new OracleConnection();
             conn.ConnectionString = CadenaConexion;
             try
@@ -49,55 +49,38 @@ namespace MisOfertasDesktop
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAñadir_Click(object sender, EventArgs e)
         {
             using (OracleConnection OraConn = Conectar())
             {
-                /* OracleCommand OraCmd = new OracleCommand();
-                 OraCmd.Connection = OraConn;
-                 OraCmd.CommandText = "add_user";
-                 OraCmd.CommandType = CommandType.StoredProcedure;
-                 OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
-                 OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txt_pass.Text;
-                 OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txt_nombre.Text;
-                 OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txt_apellido.Text;
-                 OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
-                 OraCmd.Parameters.Add("p_fono", OracleDbType.Varchar2).Value = txt_fono.Text;
-                 OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txt_direccion.Text;
-                 OraCmd.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
-
-                 OraCmd.Parameters["p_message"].Size = 255;
-                 OracleDataReader dr = OraCmd.ExecuteReader();
-
-                 OraCmd.ExecuteNonQuery();
-
-                 object mensaje = OraCmd.Parameters["p_message"].Value;
-
-                 if ()
-                 {
-                     MessageBox.Show("Se ha ingresado correctamente un usuario", "Aviso");
-                 }
-                 else
-                 {
-                     MessageBox.Show("Usuario incorrecto", "Aviso");
-                 }*/
-
                 OracleCommand OraCmd = new OracleCommand();
                 OraCmd.Connection = OraConn;
                 OraCmd.CommandText = "add_user";
                 OraCmd.CommandType = CommandType.StoredProcedure;
-
-                //OraCmd.Parameters.Add("Action", "Insert");
-                OraCmd.Parameters.Add("p_rut", txt_rut.Text);
-                OraCmd.Parameters.Add("p_password", txt_pass.Text);
-                OraCmd.Parameters.Add("p_nombre", txt_pass.Text);
-                OraCmd.Parameters.Add("p_apellido", txt_nombre.Text);
-                OraCmd.Parameters.Add("p_correo", txt_rut.Text);
-                OraCmd.Parameters.Add("p_fono", txt_pass.Text);
-                OraCmd.Parameters.Add("p_direccion", txt_nombre.Text);
-                OraCmd.Parameters.Add("p_rol", comboBox1.Text);
+                OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
+                OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txt_pass.Text;
+                OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txt_nombre.Text;
+                OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txt_apellido.Text;
+                OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
+                OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txt_fono.Text;
+                OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txt_direccion.Text;
+                OraCmd.Parameters.Add("p_fecha_registro", DateTime.Now);
+                OraCmd.Parameters.Add("p_ultimo_acceso", DateTime.Now);
+                OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol.Text;
+                OraCmd.Parameters.Add("p_puntos_acumulados", OracleDbType.Int32).Value = null;
+                OraCmd.Parameters.Add("p_rut_empresa_a_cargo", OracleDbType.Varchar2).Value = "79.859.690-K";
                 OraCmd.ExecuteNonQuery();
-                
+
+
+
+                /*if ()
+                {
+                    MessageBox.Show("Se ha ingresado correctamente un usuario", "Aviso");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario incorrecto", "Aviso");
+                }*/
             }
 
         }

@@ -24,7 +24,7 @@ namespace MisOfertasDesktop
         private OracleConnection Conectar()
         {
             string CadenaConexion = ConfigurationManager.ConnectionStrings["MisOfertas"].ConnectionString;
-            CadenaConexion = string.Format(CadenaConexion, "admin", "adminpass");
+            CadenaConexion = string.Format(CadenaConexion, "MisOfertas", "bsam123");
             OracleConnection conn = new OracleConnection();
             conn.ConnectionString = CadenaConexion;
             try
