@@ -303,6 +303,7 @@
             this.txt_rut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_rut.Location = new System.Drawing.Point(279, 30);
             this.txt_rut.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_rut.MaxLength = 10;
             this.txt_rut.Name = "txt_rut";
             this.txt_rut.Size = new System.Drawing.Size(242, 34);
             this.txt_rut.TabIndex = 1;

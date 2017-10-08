@@ -54,33 +54,54 @@ namespace MisOfertasDesktop
             using (OracleConnection OraConn = Conectar())
             {
                 OracleCommand OraCmd = new OracleCommand();
+                OracleCommand OraCmd2 = new OracleCommand();
                 OraCmd.Connection = OraConn;
+                OraCmd2.Connection = OraConn;
                 OraCmd.CommandText = "add_user";
+                OraCmd2.CommandText = "valid_exist";
                 OraCmd.CommandType = CommandType.StoredProcedure;
-                OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
-                OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txt_pass.Text;
-                OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txt_nombre.Text;
-                OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txt_apellido.Text;
-                OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
-                OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txt_fono.Text;
-                OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txt_direccion.Text;
-                OraCmd.Parameters.Add("p_fecha_registro", DateTime.Now);
-                OraCmd.Parameters.Add("p_ultimo_acceso", DateTime.Now);
-                OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol.Text;
-                OraCmd.Parameters.Add("p_puntos_acumulados", OracleDbType.Int32).Value = null;
-                OraCmd.Parameters.Add("p_rut_empresa_a_cargo", OracleDbType.Varchar2).Value = "79.859.690-K";
-                OraCmd.ExecuteNonQuery();
+                OraCmd2.CommandType = CommandType.StoredProcedure;
+                
+                /*try
+                {*/
+                    OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
+                    OraCmd2.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
+                    OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txt_pass.Text;
+                    OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txt_nombre.Text;
+                    OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txt_apellido.Text;
+                    OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
+                    OraCmd2.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
+                    OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txt_fono.Text;
+                    OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txt_direccion.Text;
+                    OraCmd.Parameters.Add("p_fecha_registro", DateTime.Now);
+                    OraCmd.Parameters.Add("p_ultimo_acceso", DateTime.Now);
+                    OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol.Text;
+                    OraCmd.Parameters.Add("p_puntos_acumulados", OracleDbType.Int32).Value = null;
+                    OraCmd.Parameters.Add("p_rut_empresa_a_cargo", OracleDbType.Varchar2).Value = "79.859.690-K";
+                    OraCmd2.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
 
+                    OraCmd2.Parameters["p_message"].Size = 255;
 
+                    
+                    OraCmd2.ExecuteNonQuery();
 
-                /*if ()
+                object mensaje = OraCmd2.Parameters["p_message"].Value;
+
+                    if (mensaje.ToString() == "OK")
+                    {
+                        MessageBox.Show("Se ha ingresado correctamente un usuario", "Aviso");
+                        OraCmd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario existe", "Aviso");
+                    }
+                /*}catch(Exception ex)
                 {
-                    MessageBox.Show("Se ha ingresado correctamente un usuario", "Aviso");
-                }
-                else
-                {
-                    MessageBox.Show("Usuario incorrecto", "Aviso");
+                    MessageBox.Show(ex.Message);
                 }*/
+
+                
             }
 
         }
