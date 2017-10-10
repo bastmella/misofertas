@@ -37,11 +37,6 @@ namespace MisOfertasDesktop
         }
 
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             AdministradorMantenedores mantenedor = new AdministradorMantenedores();
@@ -61,31 +56,31 @@ namespace MisOfertasDesktop
                 OraCmd2.CommandText = "valid_exist";
                 OraCmd.CommandType = CommandType.StoredProcedure;
                 OraCmd2.CommandType = CommandType.StoredProcedure;
-                
-                /*try
-                {*/
-                    OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
-                    OraCmd2.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txt_rut.Text;
-                    OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txt_pass.Text;
-                    OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txt_nombre.Text;
-                    OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txt_apellido.Text;
-                    OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
-                    OraCmd2.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txt_correo.Text;
-                    OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txt_fono.Text;
-                    OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txt_direccion.Text;
+
+                try
+                {
+                    OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txtRut_Add.Text;
+                    OraCmd2.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txtRut_Add.Text;
+                    OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txtPass_Add.Text;
+                    OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txtNombre_Add.Text;
+                    OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txtApellido_Add.Text;
+                    OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txtCorreo_Add.Text;
+                    OraCmd2.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txtCorreo_Add.Text;
+                    OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txtFono_Add.Text;
+                    OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txtDirecc_Add.Text;
                     OraCmd.Parameters.Add("p_fecha_registro", DateTime.Now);
                     OraCmd.Parameters.Add("p_ultimo_acceso", DateTime.Now);
-                    OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol.Text;
+                    OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol_Add.Text;
                     OraCmd.Parameters.Add("p_puntos_acumulados", OracleDbType.Int32).Value = null;
                     OraCmd.Parameters.Add("p_rut_empresa_a_cargo", OracleDbType.Varchar2).Value = "79.859.690-K";
                     OraCmd2.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
 
                     OraCmd2.Parameters["p_message"].Size = 255;
 
-                    
+
                     OraCmd2.ExecuteNonQuery();
 
-                object mensaje = OraCmd2.Parameters["p_message"].Value;
+                    object mensaje = OraCmd2.Parameters["p_message"].Value;
 
                     if (mensaje.ToString() == "OK")
                     {
@@ -96,29 +91,71 @@ namespace MisOfertasDesktop
                     {
                         MessageBox.Show("Usuario existe", "Aviso");
                     }
-                /*}catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }*/
+                }
 
-                
+
             }
 
         }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void Datos()
         {
+            OracleDataAdapter objAdapter = new OracleDataAdapter();
+            DataTable dt = new DataTable();
+            OracleCommand objSelectCmd = new OracleCommand();
+            using (OracleConnection cnn = Conectar())
+            {
+                objSelectCmd.Connection = cnn;
+                objSelectCmd.CommandText = "Mantenedor.Cargar_Datos_DGV";
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+                objSelectCmd.Parameters.Add("cursorDatos", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                objAdapter.SelectCommand = objSelectCmd;
+                objAdapter.Fill(dt);
+                dtgUsuario.DataSource = dt;
+            }
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            using (OracleConnection OraConn = Conectar())
+            {
+                OracleCommand OraCmd = new OracleCommand();
+                OraCmd.Connection = OraConn;
+                OraCmd.CommandText = "Mantenedor.ObtenerCampos";
+                OraCmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txtRut_Mod.Text;
+                    OraCmd.Parameters.Add(new OracleParameter("cursorObtener", OracleDbType.RefCursor)).Direction = ParameterDirection.Output;
 
+                    OracleDataReader dr = OraCmd.ExecuteReader();
+                    OraCmd.ExecuteNonQuery();
+                    if (dr.HasRows)
+                    {
+                        while (dr.Read())
+                        {
+                            txtNombre_Mod.Text = Convert.ToString(dr["NOMBRE"]);
+                            txtApellido_Mod.Text = Convert.ToString(dr["APELLIDO"]);
+                            txtCorreo_Mod.Text = Convert.ToString(dr["CORREO"]);
+                            txtFono_Mod.Text = Convert.ToString(dr["FONO"]);
+                            txtDirecc_Mod.Text = Convert.ToString(dr["DIRECCION"]);
+                            txtPass_Mod.Text = Convert.ToString(dr["PASSWORD"]);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void bntModificar_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+
