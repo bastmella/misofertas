@@ -47,7 +47,7 @@ namespace MisOfertasDesktop
 
         private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Empresas emp = new Empresas();
+            Tiendas emp = new Tiendas();
             emp.Show();
             this.Hide();
         }

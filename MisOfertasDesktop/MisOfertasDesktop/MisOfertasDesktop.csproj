@@ -57,11 +57,11 @@
     <Compile Include="Descuentos.Designer.cs">
       <DependentUpon>Descuentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empresas.cs">
+    <Compile Include="Tiendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Empresas.Designer.cs">
-      <DependentUpon>Empresas.cs</DependentUpon>
+    <Compile Include="Tiendas.Designer.cs">
+      <DependentUpon>Tiendas.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuAdministrador.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="Descuentos.resx">
       <DependentUpon>Descuentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Empresas.resx">
-      <DependentUpon>Empresas.cs</DependentUpon>
+    <EmbeddedResource Include="Tiendas.resx">
+      <DependentUpon>Tiendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdministradorMantenedores.resx">
       <DependentUpon>AdministradorMantenedores.cs</DependentUpon>

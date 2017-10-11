@@ -24,7 +24,7 @@ namespace MisOfertasDesktop
 
         private void btn_empresas_Click(object sender, EventArgs e)
         {
-            Empresas emp = new Empresas();
+            Tiendas emp = new Tiendas();
             emp.Show();
             this.Hide();
         }
