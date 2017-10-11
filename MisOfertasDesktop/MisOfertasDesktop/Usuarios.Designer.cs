@@ -80,11 +80,15 @@
             // 
             // dtgUsuario
             // 
+            this.dtgUsuario.AllowUserToAddRows = false;
+            this.dtgUsuario.AllowUserToDeleteRows = false;
+            this.dtgUsuario.AllowUserToOrderColumns = true;
             this.dtgUsuario.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuario.Location = new System.Drawing.Point(33, 436);
             this.dtgUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.dtgUsuario.Name = "dtgUsuario";
+            this.dtgUsuario.ReadOnly = true;
             this.dtgUsuario.Size = new System.Drawing.Size(1102, 264);
             this.dtgUsuario.TabIndex = 5;
             // 
@@ -532,6 +536,7 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtRut_Del
             // 

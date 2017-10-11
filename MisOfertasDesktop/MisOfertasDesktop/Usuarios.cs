@@ -14,9 +14,27 @@ namespace MisOfertasDesktop
 {
     public partial class Usuarios : Form
     {
+        private void Datos()
+        {
+            OracleDataAdapter objAdapter = new OracleDataAdapter();
+            DataTable dt = new DataTable();
+            OracleCommand objSelectCmd = new OracleCommand();
+            using (OracleConnection cnn = Conectar())
+            {
+                objSelectCmd.Connection = cnn;
+                objSelectCmd.CommandText = "MantenedorUsu.Cargar_Datos_DGV";
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+                objSelectCmd.Parameters.Add("cursorDatos", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+                objAdapter.SelectCommand = objSelectCmd;
+                objAdapter.Fill(dt);
+                dtgUsuario.DataSource = dt;
+            }
+
+        }
         public Usuarios()
         {
             InitializeComponent();
+            Datos();
         }
 
         private OracleConnection Conectar()
@@ -46,84 +64,57 @@ namespace MisOfertasDesktop
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            using (OracleConnection OraConn = Conectar())
+            string rut = Convert.ToString(txtRut_Add.Text.Trim());
+            string nombre = Convert.ToString(txtNombre_Add.Text.Trim());
+            string apellido = Convert.ToString(txtApellido_Add.Text.Trim());
+            string correo = Convert.ToString(txtCorreo_Add.Text.Trim());
+            int fono = Convert.ToInt32(txtFono_Add.Text.Trim());
+            string direccion = Convert.ToString(txtDirecc_Add.Text.Trim());
+            string contraseña = Convert.ToString(txtPass_Add.Text.Trim());
+            string rol = Convert.ToString(cbxRol_Add.Text.Trim());
+            if ((string.IsNullOrEmpty(rut)) || (string.IsNullOrEmpty(nombre) || (string.IsNullOrEmpty(apellido)) || (string.IsNullOrEmpty(correo)) || (string.IsNullOrEmpty(fono.ToString())) || (string.IsNullOrEmpty(direccion)) || (string.IsNullOrEmpty(contraseña)) || (string.IsNullOrEmpty(rol))))
             {
-                OracleCommand OraCmd = new OracleCommand();
-                OracleCommand OraCmd2 = new OracleCommand();
-                OraCmd.Connection = OraConn;
-                OraCmd2.Connection = OraConn;
-                OraCmd.CommandText = "add_user";
-                OraCmd2.CommandText = "valid_exist";
+                MessageBox.Show("Favor especificar todos los campos");
+                return;
+            }
+
+            OracleDataAdapter OraAdap = new OracleDataAdapter();
+            DataTable dt = new DataTable();
+            OracleCommand OraCmd = new OracleCommand();
+            using (OracleConnection cnn = Conectar())
+            {
+                OraCmd.Connection = cnn;
+                OraCmd.CommandText = "MantenedorUsu.insert_Datos";
                 OraCmd.CommandType = CommandType.StoredProcedure;
-                OraCmd2.CommandType = CommandType.StoredProcedure;
+                OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2, 10).Value = rut;
+                OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2, 50).Value = nombre;
+                OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2, 50).Value = apellido;
+                OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2, 50).Value = correo;
+                OraCmd.Parameters.Add("p_fono", OracleDbType.Int32, 8).Value = fono;
+                OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2, 50).Value = direccion;
+                OraCmd.Parameters.Add("p_password", OracleDbType.Varchar2, 50).Value = contraseña;
+                OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2, 50).Value = rol;
 
                 try
                 {
-                    OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txtRut_Add.Text;
-                    OraCmd2.Parameters.Add("p_rut", OracleDbType.Varchar2).Value = txtRut_Add.Text;
-                    OraCmd.Parameters.Add("P_password", OracleDbType.Varchar2).Value = txtPass_Add.Text;
-                    OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2).Value = txtNombre_Add.Text;
-                    OraCmd.Parameters.Add("p_apellido", OracleDbType.Varchar2).Value = txtApellido_Add.Text;
-                    OraCmd.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txtCorreo_Add.Text;
-                    OraCmd2.Parameters.Add("p_correo", OracleDbType.Varchar2).Value = txtCorreo_Add.Text;
-                    OraCmd.Parameters.Add("p_fono", OracleDbType.Int32).Value = txtFono_Add.Text;
-                    OraCmd.Parameters.Add("p_direccion", OracleDbType.Varchar2).Value = txtDirecc_Add.Text;
-                    OraCmd.Parameters.Add("p_fecha_registro", DateTime.Now);
-                    OraCmd.Parameters.Add("p_ultimo_acceso", DateTime.Now);
-                    OraCmd.Parameters.Add("p_rol", OracleDbType.Varchar2).Value = cbxRol_Add.Text;
-                    OraCmd.Parameters.Add("p_puntos_acumulados", OracleDbType.Int32).Value = null;
-                    OraCmd.Parameters.Add("p_rut_empresa_a_cargo", OracleDbType.Varchar2).Value = "79.859.690-K";
-                    OraCmd2.Parameters.Add(new OracleParameter("p_message", OracleDbType.Varchar2)).Direction = ParameterDirection.Output;
-
-                    OraCmd2.Parameters["p_message"].Size = 255;
-
-
-                    OraCmd2.ExecuteNonQuery();
-
-                    object mensaje = OraCmd2.Parameters["p_message"].Value;
-
-                    if (mensaje.ToString() == "OK")
-                    {
-                        MessageBox.Show("Se ha ingresado correctamente un usuario", "Aviso");
-                        OraCmd.ExecuteNonQuery();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario existe", "Aviso");
-                    }
+                    OraCmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-
+                Datos();
             }
 
         }
-        private void Datos()
-        {
-            OracleDataAdapter objAdapter = new OracleDataAdapter();
-            DataTable dt = new DataTable();
-            OracleCommand objSelectCmd = new OracleCommand();
-            using (OracleConnection cnn = Conectar())
-            {
-                objSelectCmd.Connection = cnn;
-                objSelectCmd.CommandText = "Mantenedor.Cargar_Datos_DGV";
-                objSelectCmd.CommandType = CommandType.StoredProcedure;
-                objSelectCmd.Parameters.Add("cursorDatos", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-                objAdapter.SelectCommand = objSelectCmd;
-                objAdapter.Fill(dt);
-                dtgUsuario.DataSource = dt;
-            }
-        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             using (OracleConnection OraConn = Conectar())
             {
                 OracleCommand OraCmd = new OracleCommand();
                 OraCmd.Connection = OraConn;
-                OraCmd.CommandText = "Mantenedor.ObtenerCampos";
+                OraCmd.CommandText = "MantenedorUsu.ObtenerCampos";
                 OraCmd.CommandType = CommandType.StoredProcedure;
                 try
                 {
@@ -174,7 +165,7 @@ namespace MisOfertasDesktop
             using (OracleConnection cnn = Conectar())
             {
                 OraCmd.Connection = cnn;
-                OraCmd.CommandText = "Mantenedor.update_Datos";
+                OraCmd.CommandText = "MantenedorUsu.update_Datos";
                 OraCmd.CommandType = CommandType.StoredProcedure;
                 OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2, 10).Value = rut;
                 OraCmd.Parameters.Add("p_nombre", OracleDbType.Varchar2, 50).Value = nombre;
@@ -188,6 +179,38 @@ namespace MisOfertasDesktop
                 {
                     OraCmd.ExecuteNonQuery();
                 }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                Datos();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string rut = Convert.ToString(txtRut_Del.Text.Trim());
+
+            if ((string.IsNullOrEmpty(rut)))
+            {
+                MessageBox.Show("Favor especificar todos los campos");
+                return;
+            }
+
+            OracleDataAdapter OraAdap = new OracleDataAdapter();
+            DataTable dt = new DataTable();
+            OracleCommand OraCmd = new OracleCommand();
+
+            using (OracleConnection cnn = Conectar())
+            {
+                OraCmd.Connection = cnn;
+                OraCmd.CommandText = "MantenedorUsu.delete_Datos";
+                OraCmd.CommandType = CommandType.StoredProcedure;
+                OraCmd.Parameters.Add("p_rut", OracleDbType.Varchar2, 10).Value = rut;
+                try
+                {
+                    OraCmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
